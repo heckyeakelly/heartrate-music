@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform} from 'react-native';
+import { Platform } from 'react-native';
 import { HStack, Icon, Slider, Spinner, VStack, Text, Button } from 'native-base';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -15,7 +15,7 @@ type AudioPlayerViewProps = {
   duration: number; // current playing duration value of audio player.
 };
 
-export function AudioPlayerView({
+export function AudioPlayer({
   active,
   playable,
   loading,
@@ -25,7 +25,7 @@ export function AudioPlayerView({
   totalDuration,
   seekAudio,
   duration,
-}: AudioPlayerViewProps) => {
+}: AudioPlayerViewProps) {
   const handleIconClick = (e) => {
     if (Platform.OS === 'web') {
       e?.preventDefault();
@@ -106,7 +106,7 @@ export function AudioPlayerView({
         <Slider.Thumb bg={'blue.400'} ml={-2} />
       </Slider>
       <Text fontFamily={'body'} color={active ? 'blue.600' : 'grey.400'} mr={2}>
-        {audioDurationTime(totalDuration - duration)}
+        {/* {audioDurationTime(totalDuration - duration)} */}
       </Text>
     </HStack>
   );
