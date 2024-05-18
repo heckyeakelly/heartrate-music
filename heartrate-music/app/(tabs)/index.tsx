@@ -23,14 +23,14 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-      <Ionicons size={30} name='play-outline' />
-<AudioPlayer active={true} playable={true} loading={false} isPlaying={false} playAudio={function (): void {
+        <Ionicons size={30} name='play-outline' />
+        <AudioPlayer active={true} playable={true} loading={false} isPlaying={false} playAudio={function (): void {
           throw new Error('Function not implemented.');
-        } } pauseAudio={function (): void {
+        }} pauseAudio={function (): void {
           throw new Error('Function not implemented.');
-        } } totalDuration={0} seekAudio={function (value: number): void {
+        }} totalDuration={0} seekAudio={function (value: number): void {
           throw new Error('Function not implemented.');
-        } } duration={0}/>
+        }} duration={0} />
       </ThemedView>
       {/* <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
