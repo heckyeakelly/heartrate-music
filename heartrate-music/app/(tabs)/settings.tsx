@@ -11,16 +11,43 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}>
+      headerImage={<Ionicons size={310} name="cog" style={styles.headerImage} />}>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">Settings</ThemedText>
       </ThemedView>
       <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+
+      <Collapsible title='Device'>
+        <ThemedText>Garmin</ThemedText>
+        <ThemedText>Fitbit</ThemedText>
+        <ThemedText>Apple Watch</ThemedText>
+        <ThemedText>Samsung Watch</ThemedText>
+        <Ionicons size={30} name='add-circle' />
+      </Collapsible>
+      <Collapsible title='Music'>
+        <ThemedText>File location: C:/Users/Kelly/Music/</ThemedText>
+        <Ionicons size={30} name='add-circle' />
+      </Collapsible>
+      <Collapsible title='Device'>
+        <ThemedText>Garmin</ThemedText>
+        <ThemedText>Fitbit</ThemedText>
+        <ThemedText>Apple Watch</ThemedText>
+        <ThemedText>Samsung Watch</ThemedText>
+        <Ionicons size={30} name='add-circle' />
+      </Collapsible>
+      <Collapsible title='Bedtime'>
+        <ThemedText>10:30 pm</ThemedText>
+        <Ionicons size={30} name='pencil' />
+      </Collapsible>
+      <Collapsible title='Resting heart rate'>
+        <ThemedText>75 BPM</ThemedText>
+        <Ionicons size={30} name='heart' />
+      </Collapsible>
+      {/* <Collapsible title="File-based routing">
         <ThemedText>
           This app has two screens:{' '}
           <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          <ThemedText type="defaultSemiBold">app/(tabs)/settings.tsx</ThemedText>
         </ThemedText>
         <ThemedText>
           The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
@@ -83,7 +110,7 @@ export default function TabTwoScreen() {
             </ThemedText>
           ),
         })}
-      </Collapsible>
+      </Collapsible> */}
     </ParallaxScrollView>
   );
 }

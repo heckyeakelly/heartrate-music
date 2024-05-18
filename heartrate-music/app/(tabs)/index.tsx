@@ -1,10 +1,13 @@
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { Image, StyleSheet, Platform } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { AudioPlayer } from "@/components/AudioPlayer";
 
+import React from 'react';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
@@ -20,6 +23,16 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
+      <Ionicons size={30} name='play-outline' />
+<AudioPlayer active={true} playable={true} loading={false} isPlaying={false} playAudio={function (): void {
+          throw new Error('Function not implemented.');
+        } } pauseAudio={function (): void {
+          throw new Error('Function not implemented.');
+        } } totalDuration={0} seekAudio={function (value: number): void {
+          throw new Error('Function not implemented.');
+        } } duration={0}/>
+      </ThemedView>
+      {/* <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
@@ -29,8 +42,8 @@ export default function HomeScreen() {
           </ThemedText>{' '}
           to open developer tools.
         </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
+      </ThemedView> */}
+      {/* <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 2: Explore</ThemedText>
         <ThemedText>
           Tap the Explore tab to learn more about what's included in this starter app.
@@ -45,7 +58,7 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
-      </ThemedView>
+      </ThemedView> */}
     </ParallaxScrollView>
   );
 }

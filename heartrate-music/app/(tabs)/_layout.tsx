@@ -5,10 +5,14 @@ import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
+import { NativeBaseProvider } from 'native-base';
+
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
+    <NativeBaseProvider>
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
@@ -24,14 +28,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="settings"
         options={{
-          title: 'Explore',
+          title: 'Settings',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'cog' : 'cog-outline'} color={color} />
           ),
         }}
       />
     </Tabs>
+    </NativeBaseProvider>
   );
 }
